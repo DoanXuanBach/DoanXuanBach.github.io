@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Сообщение для Тейлор</title>
+  <style>
+    body {
+      background-color: #faf5ff;
+      color: #3c096c;
+      font-family: 'Georgia', serif;
+      padding: 60px;
+      line-height: 1.8;
+    }
+    h1 {
+      font-size: 2.6em;
+      color: #7b2cbf;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.2em;
+      text-align: center;
+    }
+    textarea {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      height: 150px;
+      font-size: 1em;
+      padding: 10px;
+      border: 1px solid #7b2cbf;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: 'Georgia', serif;
+    }
+    button {
+      margin: 20px auto 0;
+      display: block;
+      background-color: #7b2cbf;
+      color: white;
+      font-size: 1em;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .thanks {
+      text-align: center;
+      margin-top: 30px;
+      font-style: italic;
+      color: #5a189a;
+    }
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #5f0f40;
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 Сообщение для Тейлор</h1>
+
+  <p>
+    Иногда нам просто нужно сказать «спасибо».  
+    За песню, что помогла пережить день. За строку, что отразила наши чувства.  
+    За голос, который будто звучал изнутри.
+  </p>
+
+  <p>
+    Напишите несколько слов для Тейлор Свифт —  
+    она всегда слышит, когда речь идёт от сердца.
+  </p>
+
+  <textarea placeholder="Ваше сообщение для Тейлор..."></textarea>
+  <button onclick="submitMessage()">Отправить</button>
+
+  <div class="thanks" id="thanksBox"></div>
+
+  <a href="index.html">← Вернуться на главную</a>
+
+  <script>
+    function submitMessage() {
+      const box = document.getElementById('thanksBox');
+      box.textContent = "Спасибо! Твоя любовь и слова важны. 💜";
+    }
+  </script>
+</body>
+</html>
