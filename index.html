@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Путешествие по эрам Тейлор Свифт</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff5f8;
+      color: #2c2c2c;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 { font-size: 3em; color: #d63384; }
+    p { font-size: 1.3em; }
+    input, button {
+      padding: 10px; font-size: 1em;
+      margin-top: 10px; border-radius: 5px;
+    }
+    button {
+      background-color: #d63384;
+      color: white; border: none;
+      cursor: pointer;
+    }
+    .personal-message { margin-top: 30px; font-size: 1.2em; color: #8e2c67; }
+    a { margin-top: 40px; display: block; color: #6f42c1; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1>Путешествие по эрам</h1>
+
+  <p>Каждая эра — это не просто альбом. Это целый мир чувств, воспоминаний и отражений души певицы, которая выросла на наших глазах.</p>
+  <p>Введите своё имя, и Тейлор скажет вам «привет» — нежно, по-своему особому, будто лично для вас.</p>
+
+  <input id="username" placeholder="Ваше имя">
+  <button onclick="showMessage()">Получить сообщение</button>
+
+  <div class="personal-message" id="messageBox"></div>
+
+  <a href="page_2.html">→ Перейти к эпохам</a>
+
+  <script>
+    function showMessage() {
+      const name = document.getElementById('username').value.trim();
+      const box = document.getElementById('messageBox');
+      if (name) {
+        box.textContent = `Привет, ${name}! Спасибо, что разделяешь мою музыку. – Тейлор 💖`;
+      } else {
+        box.textContent = 'Пожалуйста, введите имя 💬';
+      }
+    }
+  </script>
+  <a href="page_3.html">→ Оставить сообщение для Тейлор</a>
+</body>
+</html>
