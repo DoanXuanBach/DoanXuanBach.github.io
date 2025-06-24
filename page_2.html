@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Eras of Taylor Swift</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1e1e2f;
+      color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
+      padding: 40px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3.5em;
+      color: #fcd6d6;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .era {
+      margin-bottom: 40px;
+    }
+
+    .era-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2em;
+      color: #ffe066;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .era-title:hover {
+      color: #bb86fc;
+      transform: translateX(10px);
+    }
+
+    a {
+      display: block;
+      margin-top: 50px;
+      color: #bb86fc;
+      text-decoration: none;
+      font-size: 1em;
+      text-align: center;
+    }
+
+    #quoteBox {
+      margin-top: 40px;
+      text-align: center;
+      font-style: italic;
+      color: #adb5ff;
+    }
+
+    .fan-wall {
+      margin-top: 60px;
+      padding: 20px;
+      border-top: 1px solid #444;
+      font-size: 0.95em;
+      opacity: 0.8;
+    }
+
+    .fan-mode {
+      background-color: #ffe4e1 !important;
+      color: #7f1d1d !important;
+      cursor: url('https://abs.twimg.com/emoji/v2/72x72/2764.png'), auto;
+    }
+
+    .toggle-button {
+      margin: 20px auto;
+      display: block;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #fcd6d6;
+      color: #1e1e2f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Музыкальные эпохи Тейлор Свифт</h1>
+
+  <div id="quoteBox"></div>
+
+  <div class="era">
+    <a class="era-title" href="debut.html">🎸 Debut (2006)</a>
+  </div>
+
+  <div class="era">
+    <a class="era-title" href="red.html">💔 Red (2012)</a>
+  </div>
+
+  <div class="era">
+    <a class="era-title" href="reputation.html">🖤 Reputation (2017)</a>
+  </div>
+
+  <div class="era">
+    <a class="era-title" href="midnights.html">🌌 Midnights (2022)</a>
+  </div>
+
+  <button class="toggle-button" onclick="toggleFanMode()">🎤 Включить фан-режим</button>
+
+  <div class="fan-wall">
+    <p><em>Анна:</em> Спасибо за Midnights. Это была моя ночь.</p>
+    <p><em>Дима:</em> “Red” — альбом, который прошёл со мной через расставание.</p>
+    <p><em>Лена:</em> “It's me, hi...” — как будто про меня. ❤️</p>
+  </div>
+
+  <a href="page_3.html">→ Оставить сообщение для Тейлор</a>
+
+  <script>
+    const quotes = [
+      "Just be yourself, there is no one better.",
+      "The monsters turned out to be just trees.",
+      "I'm intimidated by the fear of being average.",
+      "No matter what happens in life, be good to people."
+    ];
+    document.getElementById("quoteBox").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+
+    function toggleFanMode() {
+      document.body.classList.toggle('fan-mode');
+    }
+  </script>
+</body>
+</html>
